@@ -404,15 +404,16 @@
             <h3>Compare Polar products</h3>
             <h5>Three smartwatches for every need</h5>
         </div>
-
-        <table style="width:50%" class="small-12 comparison">
-            <tbody>
+        <table class="table table-hover font-table" style="width:50%" class="small-12 comparison">
+            <thead>
             <tr>
                 <th class="small-4">&nbsp;</th>
                 <th class="small-1">Polar 5X</th>
                 <th class="small-1">Polar 5</th>
                 <th class="small-1">Polar Pixel</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td><b>Android Wear Smartwatch OS</b></td>
                 <td><span>•</span></td>
@@ -718,7 +719,22 @@
         </div>
     </div>
 </footer>
-
+<script>
+    function initMap() {
+        var uluru = {lat: 37.79181408287715, lng: 26.7050767569458};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1HW2fRS_ThaOAcHDRERkRJve35FqiCHs&callback=initMap"
+        type="text/javascript"></script>
 
 <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
 <script src="assets/js/vendor/bootstrap.min.js"></script>
@@ -731,5 +747,7 @@
 
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/main.js"></script>
+
+
 </body>
 </html>
